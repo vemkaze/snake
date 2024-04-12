@@ -1,0 +1,11 @@
+#score {
+    text-align:center;
+    font-size: 150px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#canvas {
+   position: absolute;
+   top: 50%;
+   bottom:50%;
+   transform:translate(-50%,-50%) ;
+}
