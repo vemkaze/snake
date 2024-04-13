@@ -44,3 +44,10 @@ function blankCanvas() {
   ctx.strokeRect(0, 0, Canvas.width, Canvas.height);
 
 }
+
+function drawFood() {
+  ctx.fillStyle = FOOD_COLOUR;
+  ctx.strokestyle = FOOD_BORDER_COLOUR;
+  ctx.fillRect(foodX, foodY, 10, 10);
+  ctx.strokeRect(foodX, foodY, 10, 10);
+}
