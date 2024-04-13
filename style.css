@@ -3,7 +3,7 @@
     font-size: 150px;
     font-family: 'Times New Roman', Times, serif;
 }
-#canvas {
+#Canvas {
    position: absolute;
    top: 50%;
    bottom:50%;
