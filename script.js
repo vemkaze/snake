@@ -28,4 +28,6 @@ let vy = 0;
 
 const canvas = document.getElementById('canvas');
 
+const ctx = gameCanvas.getContext("2d");
+
  
