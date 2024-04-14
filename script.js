@@ -48,6 +48,10 @@ function blankCanvas() {
 function drawFood() {
   ctx.fillStyle = FOOD_COLOUR;
   ctx.strokestyle = FOOD_BORDER_COLOUR;
-  ctx.fillRect(foodX, foodY, 10, 10);
+  ctx.fillRect(foodX, foodY, 10, 10); 
   ctx.strokeRect(foodX, foodY, 10, 10);
+}
+
+function randomTen(min, max) {
+  return Math.round((Math.random() * (max-min) + min) / 10) * 10;
 }
