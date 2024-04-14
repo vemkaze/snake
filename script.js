@@ -52,6 +52,34 @@ function drawFood() {
   ctx.strokeRect(foodX, foodY, 10, 10);
 }
 
+function advanceSnake() {
+  const head = {x: snake[0].x === foodX && snake[0].y === foodY};
+  if (didEatFood){
+    score = score + 10;
+    document.getElementById('score').innerHTML = score;
+    
+  createFood();
+  } else {
+    snake.pop();
+  }
+}
+
 function randomTen(min, max) {
   return Math.round((Math.random() * (max-min) + min) / 10) * 10;
 }
+
+function createFood() {
+
+  foodX = randomTen(0, gameCanvas.width - 10);
+  
+  foodY = randomTen(0, gameCanvas.height - 10);
+
+  
+  snake.forEach(function isFoodOnSnake(part) {
+    const foodIsoNsnake = part.x == foodX && part.y == foodY;
+    if (foodIsoNsnake) createFood();
+  });
+}
+
+
+
