@@ -1,11 +1,37 @@
-#score {
-    text-align:center;
-    font-size: 150px;
-    font-family: 'Times New Roman', Times, serif;
+#gameContainer{
+
+    text-align: center;
+
 }
-#Canvas {
-   position: absolute;
-   top: 50%;
-   bottom:50%;
-   transform:translate(-50%,-50%) ;
+
+#gameBoard{
+
+    border: 3px solid;
+
+}
+
+#scoreText{
+
+    font-family: "Permanent Marker", cursive;
+
+    font-size: 100px;
+
+}
+
+#resetBtn{
+
+    font-family: "Permanent Marker", cursive;
+
+    font-size: 22px;
+
+    width: 100px;
+
+    height: 50px;
+
+    border: 4px solid;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
 }
