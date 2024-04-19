@@ -15,19 +15,21 @@ let yVelocity = 0;
 let foodX;
 let foodY;
 let score = 0;
+
 let snake = [
   {x:unitSize*4 , Y:0},
   {x:unitSize*3 , y:0},
   {X:unitSize*2 , y:0},
   {x:unitSize,y:0},
   {X:0, y:0}
-]
+];
+
 
 window.addEventListener("keydown",changeDirection);
 resetBtn.addEventListener("click",resetGame);
 
-createFood();
-drawFood();
+gameStart();
+
 
 function gameStart(){
   running = true;
@@ -50,7 +52,7 @@ function nextTick(){
 };
 function clearBoard(){
   ctx.fillStyle = boardBackground;
-  ctx.fillRect(0,0,gamewidth,gameHeight);
+  ctx.fillRect(0,0,gameWidth,gameHeight);
 };
 function createFood(){
   function randomFood(min,max){
@@ -65,7 +67,14 @@ function drawFood(){
   ctx.fillRect(foodX,foodY,unitSize,unitSize);
 };
 function moveSnake(){};
-function drawSnake(){};
+function drawSnake(){
+  ctx.fillStyle = snakeColor;
+  ctx.strokeStyle = snakeBorder;
+  snake.forEach(snakePart =>{
+    ctx.fillRect(snakePart.x,snakePart.y,unitSize,unitSize);
+    ctx.strokeRect(snakePart.x,snakePart.y,unitSize,unitSize);
+  })
+};
 function changeDirection(){};
 function checkGameOver(){};
 function displayGameOver(){};
