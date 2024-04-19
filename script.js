@@ -28,9 +28,26 @@ resetBtn.addEventListener("click",resetGame);
 
 gameStart();
 
-function gameStart(){};
-function nextTick(){};
-function clearBOard(){
+function gameStart(){
+  running = true;
+  scoreText.textContext = score;
+  createFood();
+  drawFood();
+  nextTick();
+};
+function nextTick(){
+  if(running){
+    setTimeout(()=>{
+      clearBoard();
+      drawFood();
+      moveSnake();
+      drawSnake();
+      checkGameOver();
+      nextTick();
+    },75);
+  }
+};
+function clearBoard(){
   ctx.fillStyle = boardBackground;
   ctx.fillRect(0,0,gamewidth,gameHeight);
 };
