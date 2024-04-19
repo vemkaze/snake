@@ -26,7 +26,8 @@ let snake = [
 window.addEventListener("keydown",changeDirection);
 resetBtn.addEventListener("click",resetGame);
 
-gameStart();
+createFood();
+drawFood();
 
 function gameStart(){
   running = true;
@@ -61,7 +62,7 @@ function createFood(){
 };
 function drawFood(){
   ctx.fillStyle = foodColor;
-  ctx.fillRect(foodX,foodY,unitSIze,unitSize);
+  ctx.fillRect(foodX,foodY,unitSize,unitSize);
 };
 function moveSnake(){};
 function drawSnake(){};
