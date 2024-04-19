@@ -37,6 +37,7 @@ function createFood(){
     return randNum;
   }
   foodX = randomFood(0,gameWidth - unitSize);
+  foodY = randomFood(0,gameWidth - unitSize);
 };
 function drawFood(){};
 function moveSnake(){};
