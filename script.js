@@ -49,6 +49,9 @@ function nextTick(){
       nextTick();
     },75);
   }
+  else{
+    displayGameOver();
+  }
 };
 function clearBoard(){
   ctx.fillStyle = boardBackground;
