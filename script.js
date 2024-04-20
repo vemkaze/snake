@@ -4,7 +4,7 @@ const scoreText = document.getElementById("scoreText");
 const resetBtn = document.getElementById("resetBtn");
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;
-const boardBackground = "white";
+const boardBackground = "grey";
 const snakeColor = "yellow";
 const snakeBorder = "black";
 const foodColor = "green";
@@ -143,7 +143,7 @@ function displayGameOver(){
 
   ctx.font = "50px New Times Roman";
 
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "orange";
 
   ctx.textAlign = "center";
 
