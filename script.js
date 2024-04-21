@@ -5,9 +5,10 @@ const resetBtn = document.getElementById("resetBtn");
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;
 const boardBackground = "grey";
-const snakeColor = "yellow";
+const snakeColor = "darkgreen";
 const snakeBorder = "black";
-const foodColor = "green";
+const foodColor = "red";
+const foodBorder = "black"
 const unitSize = 25;
 let running = false;
 let xVelocity = unitSize;
@@ -67,7 +68,9 @@ function createFood(){
 };
 function drawFood(){
   ctx.fillStyle = foodColor;
+  ctx.strokeStyle = foodBorder;
   ctx.fillRect(foodX,foodY,unitSize,unitSize);
+  ctx.strokeRect(foodX,foodY,unitSize,unitSize);
 };
 function moveSnake(){
   const head = {x: snake[0].x + xVelocity,
@@ -143,7 +146,7 @@ function displayGameOver(){
 
   ctx.font = "50px New Times Roman";
 
-  ctx.fillStyle = "orange";
+  ctx.fillStyle = "";
 
   ctx.textAlign = "center";
 
